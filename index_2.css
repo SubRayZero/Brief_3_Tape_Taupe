@@ -1,0 +1,125 @@
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+
+    padding: 0;
+    margin: 0;
+
+    background: white;
+}
+
+header {
+    background-color: lightblue;
+    height: 100px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 600px;
+    height: 600px;
+    margin: 10px auto;
+    padding: 0 35px;
+    background: lightblue;
+}
+
+.status {
+    color: white;
+    font-size: 16px;
+    padding: 15px 5px;
+    height: 40px;
+}
+
+.score {
+    float: left;
+}
+
+.score::after {
+    content: " points";
+}
+
+.time {
+    float: right;
+}
+
+.time::after {
+    content: " sec"
+}
+
+.box {
+    width: 180px;
+    height: 130px;
+    float: left;
+    margin: 5px;
+    border-bottom: double 6px black;
+    position: relative;
+    overflow: hidden;
+}
+
+.box.touched {
+    border-bottom-color: blue;
+}
+
+img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    cursor: pointer;
+    transition: top 0.3s;
+}
+
+.modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_section {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    padding: 50px;
+    font-size: 20px;
+
+}
+
+.modal_texte {
+    padding: 0px 10px 20px;
+}
+
+.button_start {
+    display: block;
+    padding: 10px;
+    color: #EB0C42;
+    border: double 6px #EB0C42;
+    cursor: pointer;
+    transition: 0.4s, color 0.4s;
+}
+
+.button_start:hover {
+    background: #EB0C42;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}

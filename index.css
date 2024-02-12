@@ -1,0 +1,68 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+
+    padding: 0;
+    margin: 0;
+
+    background: white;
+}
+
+
+header {
+    background-color: lightblue;
+    height: 100px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.side {
+
+    background-color: yellow;
+    height: 650px;
+    width: 100px;
+}
+
+.container {
+    height: 650px;
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.container_1 {
+    height: 400px;
+    width: 1100px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container_card {
+    background-image: url(images/asset_fish.png);
+    background-size: cover;
+    background-color: rgb(232, 242, 250);
+
+
+    height: 400px;
+    width: 300px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
