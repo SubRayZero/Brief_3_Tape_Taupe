@@ -20,11 +20,10 @@ header {
     padding: 0;
 }
 
-.side {
+.page{
+    height: 100%;
+    width: 100%;
 
-    background-color: yellow;
-    height: 650px;
-    width: 100px;
 }
 
 .container {
@@ -48,8 +47,7 @@ header {
 .container_card {
     background-image: url(images/asset_fish.png);
     background-size: cover;
-    background-color: rgb(232, 242, 250);
-
+    background-color: rgb(30, 99, 123);
 
     height: 400px;
     width: 300px;
@@ -59,10 +57,24 @@ header {
     justify-content: center;
     align-items: center;
 
+    border: solid;
+
+}
+
+.container_card_text {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 
+    backdrop-filter: blur(8px);
+}
+
+.container_image{
+    background-image: url(images/asset_first_page.png);
+    background-size: cover;
+    background-color: white;
+    height: 600px;
+    width: 700px;
 }
