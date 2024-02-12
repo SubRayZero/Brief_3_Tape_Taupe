@@ -7,22 +7,22 @@ const init = function () {
     var images = document.querySelectorAll(".box img");
     var scoreElt = document.querySelector(".score");
     var timeElt = document.querySelector(".time");
-    var modal = document.querySelector(".modal");
-    var modalText = document.querySelector(".modal_texte");
+    var sectionFirst = document.querySelector(".section_first");
+    var modalText = document.querySelector(".section_first_texte");
     var buttonStart = document.querySelector(".button_start");
     var setTimer, setShowHide;
 
     // play button
     buttonStart.addEventListener("click", function () {
-        //clearInterval(checkPageInterval);
-        modal.classList.add("hidden");
+        
+        sectionFirst.classList.add("hidden");
         setTimer = setInterval(timer, 1000);
         setShowHide = setInterval(showHide, speed * 2);
 
     });
 
 
-    // click handler and score updater
+    // score
     for (let i = 0; i < images.length; i++) {
         images[i].addEventListener("click", poissonAttraper);
     }
@@ -37,7 +37,7 @@ const init = function () {
         }, speed / 2);
     }
 
-    // show and hide with interval
+    // show and hide
     function showHide() {
         var randd = randomize(9);
         images[randd].style.top = "60px";
@@ -46,7 +46,7 @@ const init = function () {
         }, speed);
     }
 
-    // manage timer
+    // timer
     function timer() {
         if (time) {
             time -= 1;
@@ -59,7 +59,7 @@ const init = function () {
 
     function restart() {
         modalText.innerHTML = "You scored " + score + " !";
-        modal.classList.remove("hidden");
+        sectionFirst.classList.remove("hidden");
         clearInterval(setTimer);
         clearInterval(setShowHide);
         time = 30;

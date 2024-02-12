@@ -82,7 +82,7 @@ img {
     transition: top 0.3s;
 }
 
-.modal {
+.section_first {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     width: 100vw;
@@ -93,7 +93,7 @@ img {
     align-items: center;
 }
 
-.modal_section {
+.section_first_2 {
     background: white;
     width: 320px;
     margin: 50px auto;
@@ -102,7 +102,7 @@ img {
 
 }
 
-.modal_texte {
+.section_first_texte {
     padding: 0px 10px 20px;
 }
 
