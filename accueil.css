@@ -13,11 +13,25 @@ body {
 
 
 header {
-    background-color: white;
+    background: none;
     height: 100px;
 
     margin: 0;
     padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    background-image: url(images/asset_logo.webp);
+    background-size: cover;
+
+    margin-top: 40px;
+    height: 90px;
+    width: 90px;
+
+    margin-left: 70px;
 }
 
 .section {
@@ -33,37 +47,28 @@ header {
     height: 280px;
     width: 200px;
 
-    border: solid;
-    border-radius: 30px;
-    border-color: #06435d;
-
-
-    margin-top: 40px;
+    margin-top: 70px;
     margin-left: 50px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    cursor: pointer;
-
-
 }
 
+img {
+    cursor: pointer;
+    opacity: 70%;
+}
 
-.card_game_1:hover {
-
+img:hover {
     transition: 0.3s;
-    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
+    opacity: 100%;
 }
 
 .card_game_2 {
     height: 280px;
     width: 200px;
-
-    border: solid;
-    border-radius: 30px;
-    border-color: #06435d;
 
     margin-top: 300px;
 
@@ -72,40 +77,22 @@ header {
     align-items: center;
 }
 
-.card_game_2:hover {
-
-    transition: 0.3s;
-    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
-}
-
 .card_game_3 {
     height: 280px;
     width: 200px;
-
-    border: solid;
-    border-radius: 30px;
-    border-color: #06435d;
 
     margin-top: 30px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.card_game_3:hover {
 
-    transition: 0.3s;
-    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
 }
 
 .card_game_4 {
     height: 280px;
     width: 200px;
-
-    border: solid;
-    border-radius: 30px;
-    border-color: #06435d;
 
     margin-top: 200px;
     margin-left: 60px;
@@ -115,19 +102,9 @@ header {
     align-items: center;
 }
 
-.card_game_4:hover {
-
-    transition: 0.3s;
-    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
-}
-
 .card_game_5 {
     height: 280px;
     width: 200px;
-
-    border: solid;
-    border-radius: 30px;
-    border-color: #06435d;
 
     margin-top: 300px;
     margin-left: 20px;
@@ -135,10 +112,4 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.card_game_5:hover {
-
-    transition: 0.3s;
-    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
 }

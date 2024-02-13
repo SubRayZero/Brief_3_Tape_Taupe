@@ -17,23 +17,48 @@ body {
     padding: 0;
     margin: 0;
 
-    background: white;
+    background-image: url(images/asset_background_martelet.webp);
+    background-size: cover;
 }
 
 header {
-    background-color: lightblue;
+    background: none;
     height: 100px;
 
     margin: 0;
     padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {   
+    background-image: url(images/asset_logo.webp);
+    background-size: cover;
+
+    margin-top: 40px;
+    height: 90px;
+    width: 90px;
+
+    margin-left: 70px;
+}
+
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section {
     width: 600px;
-    height: 600px;
-    margin: 10px auto;
+    height: 580px;
+
     padding: 0 35px;
-    background: lightblue;
+    margin-top: 15px;
+
+    background: black;
+    opacity: 75%;
 }
 
 .status {
@@ -62,10 +87,13 @@ header {
 .box {
     width: 180px;
     height: 130px;
-    float: left;
     margin: 5px;
-    border-bottom: double 6px black;
+
+    float: left;
+
+    border-bottom: double 6px white;
     position: relative;
+
     overflow: hidden;
 
     display: flex;
@@ -73,7 +101,7 @@ header {
 }
 
 .box.touched {
-    border-bottom-color: blue;
+    border-bottom-color: red;
 }
 
 img {
@@ -87,10 +115,7 @@ img {
 
 .section_first {
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100vw;
-    height: 100vh;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,16 +135,20 @@ img {
 }
 
 .button_start {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 10px;
-    color: #EB0C42;
-    border: double 6px #EB0C42;
+
+    color: #216886;
+    border: double 6px #216886;
     cursor: pointer;
     transition: 0.4s, color 0.4s;
 }
 
 .button_start:hover {
-    background: #EB0C42;
+    background: #216886;
     color: white;
 }
 
