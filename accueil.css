@@ -9,6 +9,9 @@ body {
     margin: 0;
 
     background: #216886;
+
+    cursor: url('images/cursor_epee.webp'), auto;
+
 }
 
 
@@ -43,7 +46,8 @@ header {
     gap: 80px;
 }
 
-.card_game_1 {
+/*j'aurai pu faire une classe de plus pour avoir moins de copier collé sur les "card game*/
+.card_game_1 { 
     height: 280px;
     width: 200px;
 
@@ -57,13 +61,15 @@ header {
 }
 
 img {
-    cursor: pointer;
     opacity: 70%;
 }
 
 img:hover {
     transition: 0.3s;
     opacity: 100%;
+
+    height: 250px;
+    width: 400px;
 }
 
 .card_game_2 {
