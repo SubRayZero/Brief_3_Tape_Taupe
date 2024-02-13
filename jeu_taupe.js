@@ -1,5 +1,5 @@
 
-const init = function () {
+const init = function () { //Jeu charge à la page
 
     var score = 0;
     var time = 30;
@@ -12,7 +12,7 @@ const init = function () {
     var buttonStart = document.querySelector(".button_start");
     var setTimer, setShowHide;
 
-    // play button
+    // Boutton du jeu
     buttonStart.addEventListener("click", function () {
         
         sectionFirst.classList.add("hidden");
@@ -37,10 +37,10 @@ const init = function () {
         }, speed / 2);
     }
 
-    // show and hide
+    // Pour cacher et montrer les slimes
     function showHide() {
         var randd = randomize(9);
-        images[randd].style.top = "60px";
+        images[randd].style.top = "30px"; //taille du slime qui se montre
         setTimeout(function () {
             images[randd].style.top = "200px";
         }, speed);
@@ -57,6 +57,7 @@ const init = function () {
         }
     }
 
+    // Pour rejouer
     function restart() {
         modalText.innerHTML = "You scored " + score + " !";
         sectionFirst.classList.remove("hidden");

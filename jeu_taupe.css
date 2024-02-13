@@ -67,6 +67,9 @@ header {
     border-bottom: double 6px black;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
 }
 
 .box.touched {
@@ -75,9 +78,9 @@ header {
 
 img {
     display: block;
-    width: 100%;
+    width: 80%;
     position: absolute;
-    top: 80px;
+    top: 160px;
     cursor: pointer;
     transition: top 0.3s;
 }

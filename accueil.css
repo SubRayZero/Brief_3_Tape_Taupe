@@ -8,73 +8,137 @@ body {
     padding: 0;
     margin: 0;
 
-    background: white;
+    background: #216886;
 }
 
 
 header {
-    background-color: lightblue;
+    background-color: white;
     height: 100px;
 
     margin: 0;
     padding: 0;
 }
 
-.page{
+.section {
     height: 100%;
     width: 100%;
 
-}
-
-.container {
-    height: 650px;
-    width: 100%;
-
     display: flex;
-    justify-content: end;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
 }
 
-.container_1 {
-    height: 400px;
-    width: 1100px;
+.card_game_1 {
+    height: 280px;
+    width: 200px;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.container_card {
-    background-image: url(images/asset_fish.png);
-    background-size: cover;
-    background-color: rgb(30, 99, 123);
-
-    height: 400px;
-    width: 300px;
+    border: solid;
     border-radius: 30px;
+    border-color: #06435d;
+
+
+    margin-top: 40px;
+    margin-left: 50px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+
+
+}
+
+
+.card_game_1:hover {
+
+    transition: 0.3s;
+    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
+}
+
+.card_game_2 {
+    height: 280px;
+    width: 200px;
+
     border: solid;
+    border-radius: 30px;
+    border-color: #06435d;
 
+    margin-top: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container_card_text {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    color: rgb(0, 0, 0);
+.card_game_2:hover {
 
-    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
 }
 
-.container_image{
-    background-image: url(images/asset_first_page.png);
-    background-size: cover;
-    background-color: white;
-    height: 600px;
-    width: 700px;
+.card_game_3 {
+    height: 280px;
+    width: 200px;
+
+    border: solid;
+    border-radius: 30px;
+    border-color: #06435d;
+
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_game_3:hover {
+
+    transition: 0.3s;
+    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
+}
+
+.card_game_4 {
+    height: 280px;
+    width: 200px;
+
+    border: solid;
+    border-radius: 30px;
+    border-color: #06435d;
+
+    margin-top: 200px;
+    margin-left: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_game_4:hover {
+
+    transition: 0.3s;
+    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
+}
+
+.card_game_5 {
+    height: 280px;
+    width: 200px;
+
+    border: solid;
+    border-radius: 30px;
+    border-color: #06435d;
+
+    margin-top: 300px;
+    margin-left: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_game_5:hover {
+
+    transition: 0.3s;
+    box-shadow: 12px 12px 2px 1px rgba(215, 233, 227, 0.2);
 }
