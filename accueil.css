@@ -37,6 +37,11 @@ header {
     margin-left: 70px;
 }
 
+.header_logo:hover{
+    height: 98px;
+    width: 98px;
+}
+
 .section {
     height: 100%;
     width: 100%;
