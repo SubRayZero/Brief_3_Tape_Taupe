@@ -5,6 +5,7 @@ const init = function () { //Jeu charge à la page
     var time = 30;
     var speed = 600;
     var images = document.querySelectorAll(".box img");
+    var imagesDore = document.querySelector(".marteleur_dore");
     var scoreElt = document.querySelector(".score");
     var timeElt = document.querySelector(".time");
     var sectionFirst = document.querySelector(".section_first");
@@ -24,13 +25,24 @@ const init = function () { //Jeu charge à la page
 
     // score
     for (let i = 0; i < images.length; i++) {
-        images[i].addEventListener("click", poissonAttraper);
+        images[i].addEventListener("click", marteleurTapper, marteleurDoreTapper);
     }
 
-    function poissonAttraper(e) {
+    function marteleurTapper(e) {
         curr = e.target;
         curr.parentNode.classList.add("touched");
-        score += 10;
+        score += 1;
+        scoreElt.innerHTML = score;
+        setTimeout(function () {
+            curr.parentNode.classList.remove("touched");
+        }, speed / 2);
+
+    }
+
+    function marteleurDoreTapper(d) {
+        curr = d.target;
+        curr.parentNode.classList.add("touched");
+        score += 100;
         scoreElt.innerHTML = score;
         setTimeout(function () {
             curr.parentNode.classList.remove("touched");
@@ -41,6 +53,8 @@ const init = function () { //Jeu charge à la page
     function showHide() {
         var randd = randomize(9);
         images[randd].style.top = "30px"; //taille du marteleur qui se montre
+
+
         setTimeout(function () {
             images[randd].style.top = "200px";
         }, speed);

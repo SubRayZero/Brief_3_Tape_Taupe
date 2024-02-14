@@ -48,47 +48,14 @@ header {
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 80px;
-}
-
-/*j'aurai pu faire une classe de plus pour avoir moins de copier collé sur les "card game*/
-.card_game_1 {
-    height: 280px;
-    width: 200px;
-
-    margin-top: 70px;
-    margin-left: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
-img {
-    opacity: 70%;
-}
 
-img:hover {
-    transition: 0.3s;
-    opacity: 100%;
-
-    height: 250px;
-    width: 400px;
-}
-
-.card_game_2 {
-    height: 280px;
-    width: 200px;
-
-    margin-top: 300px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_game_3 {
+.card_game {
     height: 280px;
     width: 200px;
 
@@ -98,39 +65,91 @@ img:hover {
     justify-content: center;
     align-items: center;
 
-
 }
 
-.card_game_4 {
-    height: 280px;
-    width: 200px;
-
-    margin-top: 200px;
-    margin-left: 60px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+img {
+    opacity: 70%;
+    height: 150px;
+    width: 230px;
 }
 
-.card_game_5 {
-    height: 280px;
-    width: 200px;
+img:hover {
+    transition: 0.3s;
+    opacity: 100%;
 
-    margin-top: 300px;
-    margin-left: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 200px;
+    width: 300px;
 }
 
 .tooltip {
     display: none;
 }
 
-.menu_card:hover>.tooltip {
+/*.menu_card:hover>.tooltip {
+    color: black;
+    border: solid 0.5px;
+    border-radius: 30px;
 
-    display: block;
+    height: 100px;
+    width: 500px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 1s;
+}*/
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.section_first {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_first_2 {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    padding: 50px;
+    font-size: 20px;
+
+}
+
+
+.button_start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    color: #216886;
+    border: double 6px #216886;
+    cursor: pointer;
+    transition: 0.4s, color 0.4s;
+}
+
+.button_start:hover {
+    background: #216886;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+input {
+    margin-bottom: 30px;
 }
