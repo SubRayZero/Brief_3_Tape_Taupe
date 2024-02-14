@@ -37,7 +37,7 @@ header {
     margin-left: 70px;
 }
 
-.header_logo:hover{
+.header_logo:hover {
     height: 98px;
     width: 98px;
 }
@@ -52,7 +52,7 @@ header {
 }
 
 /*j'aurai pu faire une classe de plus pour avoir moins de copier collé sur les "card game*/
-.card_game_1 { 
+.card_game_1 {
     height: 280px;
     width: 200px;
 
@@ -123,4 +123,14 @@ img:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tooltip {
+    display: none;
+}
+
+.menu_card:hover>.tooltip {
+
+    display: block;
+    transition: 1s;
 }
