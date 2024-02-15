@@ -14,7 +14,7 @@ const init = function () { //Jeu charge à la page
 
     // Boutton démarrage du jeu
     buttonStart.addEventListener("click", function () {
-        
+
         sectionFirst.classList.add("hidden");
         setTimer = setInterval(timer, 1000);
         setShowHide = setInterval(showHide, speed * 2);
@@ -37,6 +37,10 @@ const init = function () { //Jeu charge à la page
         }, speed / 2);
     }
 
+
+
+
+
     // Pour cacher et montrer les marteleurs
     function showHide() {
         var randd = randomize(9);
@@ -53,12 +57,48 @@ const init = function () { //Jeu charge à la page
             timeElt.innerHTML = time;
         }
         else {
-            restart();
+            showScore();
         }
+    }
+
+    const buttonEnter = document.querySelector(".button_enter");
+
+    buttonEnter.addEventListener("click", () => {
+        const pseudo = document.querySelector(".pseudo_input").value;
+
+        if (pseudo !== "") {
+            putInLocalStorage(pseudo, score);
+        }
+
+        restart();
+
+    });
+
+
+    function showScore() {
+        const scoreTexte = document.querySelector(".section_end_score");
+        scoreTexte.innerHTML = "You scored " + score + " !";
+
+        const enterPseudo = document.querySelector(".section_end");
+        enterPseudo.classList.remove("hidden");
+
+
+
+    }
+
+
+    function putInLocalStorage(pseudo, score) {
+        const tableScore = JSON.parse(localStorage.getItem("tableScore") || "[]");
+
+        tableScore.push({ pseudo, score });
+
+        localStorage.setItem("tableScore", JSON.stringify(tableScore));
+
     }
 
     // Pour rejouer
     function restart() {
+        document.querySelector(".section_end").classList.add("hidden");
         modalText.innerHTML = "You scored " + score + " !";
         sectionFirst.classList.remove("hidden");
         clearInterval(setTimer);

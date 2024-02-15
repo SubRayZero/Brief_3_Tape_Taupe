@@ -3,9 +3,9 @@ const init = function () { //Jeu charge à la page
 
     var score = 0;
     var time = 30;
-    var speed = 600;
+    var speed = 1000;
     var images = document.querySelectorAll(".box img");
-    var imagesDore = document.querySelector(".marteleur_dore");
+    //var imagesDore = document.querySelector(".marteleur_dore");
     var scoreElt = document.querySelector(".score");
     var timeElt = document.querySelector(".time");
     var sectionFirst = document.querySelector(".section_first");
@@ -15,7 +15,7 @@ const init = function () { //Jeu charge à la page
 
     // Boutton démarrage du jeu
     buttonStart.addEventListener("click", function () {
-        
+
         sectionFirst.classList.add("hidden");
         setTimer = setInterval(timer, 1000);
         setShowHide = setInterval(showHide, speed * 2);
@@ -30,8 +30,16 @@ const init = function () { //Jeu charge à la page
 
     function marteleurTapper(e) {
         curr = e.target;
+
         curr.parentNode.classList.add("touched");
-        score += 1;
+
+
+        //pour vérifier si il y a le mot "or" : si oui, alors +=10
+        if (curr.src.includes("or")) {
+            score += 10;
+        } else {
+            score += 1;
+        }
         scoreElt.innerHTML = score;
         setTimeout(function () {
             curr.parentNode.classList.remove("touched");

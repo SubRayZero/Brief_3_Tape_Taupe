@@ -10,20 +10,12 @@ const init = function () { //Jeu charge à la page
 
 
     // Boutton du jeu
-    buttonStart.addEventListener("click", prenom_storage, function () {
+    buttonStart.addEventListener("click", prenom_storage, setStyles, function () {
 
         sectionFirst.classList.add("hidden");
 
     });
 
-
-    function prenom_storage() {
-
-        localStorage.setItem(".pseudo", input.value);
-
-        
-
-    }
 }
 
 window.onload = init;
