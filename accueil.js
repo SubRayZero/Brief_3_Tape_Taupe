@@ -17,14 +17,11 @@ const init = function () { //Jeu charge à la page
     });
 
 
-    if (local != null) {
-
-        
-    }
-
     function prenom_storage() {
 
         localStorage.setItem(".pseudo", input.value);
+
+        
 
     }
 }

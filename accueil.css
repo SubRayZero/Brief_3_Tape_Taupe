@@ -1,3 +1,9 @@
+html {
+    cursor: url('images/cursor_epee.webp'), auto;
+    height: 100%;
+}
+
+
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -8,12 +14,10 @@ body {
     padding: 0;
     margin: 0;
 
-    background: #216886;
+    background-color: #216886;
 
-    cursor: url('images/cursor_epee.webp'), auto;
-
+    height: 100%;
 }
-
 
 header {
     background: none;
@@ -27,7 +31,7 @@ header {
 }
 
 .header_logo {
-    background-image: url(images/asset_logo.webp);
+    background-image: url(images/asset_leaderboard.webp);
     background-size: cover;
 
     margin-top: 40px;
@@ -43,7 +47,7 @@ header {
 }
 
 .section {
-    height: 100%;
+    height: 300px;
     width: 100%;
 
     display: flex;
@@ -79,6 +83,8 @@ img:hover {
 
     height: 200px;
     width: 300px;
+
+    cursor: url('images/cursor_epee.webp'), auto;
 }
 
 .tooltip {
@@ -123,7 +129,7 @@ img:hover {
     width: 320px;
     margin: 50px auto;
     padding: 50px;
-    font-size: 20px;
+    font-size: 20px;   
 
 }
 
@@ -152,4 +158,13 @@ img:hover {
 
 input {
     margin-bottom: 30px;
+}
+
+.droits_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 8px;
 }
