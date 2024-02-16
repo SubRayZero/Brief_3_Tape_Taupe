@@ -1,0 +1,262 @@
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    background-image: url(images/asset_background_martelet.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: none;
+    height: 100px;
+
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    background-image: url(images/asset_retour_accueil.webp);
+    background-size: cover;
+
+    margin-top: 20px;
+    height: 90px;
+    width: 90px;
+
+    margin-left: 20px;
+}
+
+.header_logo:hover {
+    height: 98px;
+    width: 98px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    width: 600px;
+    height: 580px;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    background: black;
+    opacity: 75%;
+}
+
+.status {
+    color: white;
+    font-size: 16px;
+    padding: 15px 5px;
+    height: 40px;
+
+    display: flex;
+    gap: 400px;
+}
+
+.score {
+    float: left;
+}
+
+.score::after {
+    content: " points";
+}
+
+.time {
+    float: right;
+}
+
+.time::after {
+    content: " sec"
+}
+
+.box {
+    width: 180px;
+    height: 130px;
+    margin: 5px;
+
+    float: left;
+
+    border-bottom: double 6px white;
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+.box.touched {
+    border-bottom-color: red;
+}
+
+img {
+    display: block;
+    width: 80%;
+    position: absolute;
+    top: 160px;
+    cursor: pointer;
+    transition: top 0.3s;
+}
+
+.section_first {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_end {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section_first_2 {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    padding: 50px;
+    font-size: 20px;
+
+}
+
+.section_end_2 {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    padding: 50px;
+    font-size: 20px;
+
+}
+
+.section_first_texte {
+    padding: 0px 10px 20px;
+}
+
+.section_end_score {
+    padding: 0px 10px 20px;
+}
+
+.button_start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    color: #216886;
+    border: double 6px #216886;
+    cursor: pointer;
+    transition: 0.4s, color 0.4s;
+}
+
+.button_enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    color: #216886;
+    border: double 6px #216886;
+    cursor: pointer;
+    transition: 0.4s, color 0.4s;
+}
+
+.button_enter:hover{
+    background: #216886;
+    color: white;
+}
+
+.button_start:hover {
+    background: #216886;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+@media screen and (max-width: 1348.8px) {
+
+    html {
+        background-image: url(images/asset_background_martelet.webp);
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 728px) {
+    .section {
+        width: 400px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .box {
+        width: 140px;
+        height: 70px;
+        margin: 5px;
+        margin-bottom: 10px;
+
+    }
+
+    .status {
+        margin-right: 100px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+}
