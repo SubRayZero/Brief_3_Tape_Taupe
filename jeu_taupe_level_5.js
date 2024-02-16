@@ -35,9 +35,9 @@ const init = function () { //Jeu charge à la page
 
         //pour vérifier si il y a le mot "or" : si oui, alors +=10
         if (curr.src.includes("or")) {
-            score += 10;
+            score += 20;
         } else {
-            score += 1;
+            score += 10;
         }
         scoreElt.innerHTML = score;
         setTimeout(function () {
