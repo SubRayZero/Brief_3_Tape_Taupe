@@ -33,7 +33,6 @@ const init = function () { //Jeu charge à la page
 
         curr.parentNode.classList.add("touched");
 
-
         //pour vérifier si il y a le mot "or" : si oui, alors +=10
         if (curr.src.includes("or")) {
             score += 10;
@@ -75,12 +74,46 @@ const init = function () { //Jeu charge à la page
             timeElt.innerHTML = time;
         }
         else {
-            restart();
+            showScore();
         }
+    }
+
+    const buttonEnter = document.querySelector(".button_enter");
+
+    buttonEnter.addEventListener("click", () => {
+        const pseudo = document.querySelector(".pseudo_input").value;
+
+        if (pseudo !== "") {
+            putInLocalStorage(pseudo, score);
+        }
+
+        restart();
+
+    });
+
+    function showScore() {
+        const scoreTexte = document.querySelector(".section_end_score");
+        scoreTexte.innerHTML = "You scored " + score + " !";
+
+        const enterPseudo = document.querySelector(".section_end");
+        enterPseudo.classList.remove("hidden");
+
+
+
+    }
+
+    function putInLocalStorage(pseudo, score) {
+        const tableScore = JSON.parse(localStorage.getItem("tableScore") || "[]");
+
+        tableScore.push({ pseudo, score });
+
+        localStorage.setItem("tableScore", JSON.stringify(tableScore));
+
     }
 
     // Pour rejouer
     function restart() {
+        document.querySelector(".section_end").classList.add("hidden");
         modalText.innerHTML = "You scored " + score + " !";
         sectionFirst.classList.remove("hidden");
         clearInterval(setTimer);

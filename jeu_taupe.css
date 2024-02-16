@@ -40,16 +40,22 @@ header {
     background-image: url(images/asset_retour_accueil.webp);
     background-size: cover;
 
-    margin-top: 40px;
+    margin-top: 20px;
     height: 90px;
     width: 90px;
 
-    margin-left: 70px;
+    margin-left: 20px;
 }
 
 .header_logo:hover {
     height: 98px;
     width: 98px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page {
@@ -62,8 +68,9 @@ header {
     width: 600px;
     height: 580px;
 
-    padding: 0 35px;
     margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 20px;
 
     background: black;
     opacity: 75%;
@@ -74,6 +81,9 @@ header {
     font-size: 16px;
     padding: 15px 5px;
     height: 40px;
+
+    display: flex;
+    gap: 400px;
 }
 
 .score {
@@ -129,6 +139,15 @@ img {
     align-items: center;
 }
 
+.section_end {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .section_first_2 {
     background: white;
     width: 320px;
@@ -138,7 +157,20 @@ img {
 
 }
 
+.section_end_2 {
+    background: white;
+    width: 320px;
+    margin: 50px auto;
+    padding: 50px;
+    font-size: 20px;
+
+}
+
 .section_first_texte {
+    padding: 0px 10px 20px;
+}
+
+.section_end_score {
     padding: 0px 10px 20px;
 }
 
@@ -155,6 +187,25 @@ img {
     transition: 0.4s, color 0.4s;
 }
 
+.button_enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    color: #216886;
+    border: double 6px #216886;
+    cursor: pointer;
+    transition: 0.4s, color 0.4s;
+}
+
+.button_enter:hover{
+    background: #216886;
+    color: white;
+}
+
 .button_start:hover {
     background: #216886;
     color: white;
@@ -162,4 +213,50 @@ img {
 
 .hidden {
     display: none !important;
+}
+
+
+
+@media screen and (max-width: 1348.8px) {
+
+    html {
+        background-image: url(images/asset_background_martelet.webp);
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 728px) {
+    .section {
+        width: 400px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .box {
+        width: 140px;
+        height: 70px;
+        margin: 5px;
+        margin-bottom: 10px;
+
+    }
+
+    .status {
+        margin-right: 100px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .hidden {
+        display: none !important;
+    }
 }

@@ -3,7 +3,7 @@ const init = function () { //Jeu charge à la page
 
     var score = 0;
     var time = 30;
-    var speed = 600;
+    var speed = 1000;
     var images = document.querySelectorAll(".box img");
     var scoreElt = document.querySelector(".score");
     var timeElt = document.querySelector(".time");
@@ -24,10 +24,10 @@ const init = function () { //Jeu charge à la page
 
     // score
     for (let i = 0; i < images.length; i++) {
-        images[i].addEventListener("click", poissonAttraper);
+        images[i].addEventListener("click", marteleurAttraper);
     }
 
-    function poissonAttraper(e) {
+    function marteleurAttraper(e) {
         curr = e.target;
         curr.parentNode.classList.add("touched");
         score += 10;
@@ -36,9 +36,6 @@ const init = function () { //Jeu charge à la page
             curr.parentNode.classList.remove("touched");
         }, speed / 2);
     }
-
-
-
 
 
     // Pour cacher et montrer les marteleurs
